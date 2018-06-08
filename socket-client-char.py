@@ -15,7 +15,7 @@ def socket_client():
                             sys.exit(1)
               #接收服务端欢迎消息
               print s.recv(1024)
-              #发送数据
+              #无限循环发送数据，直至发送‘exit’结束
               while 1:
                             data = raw_input('what do you want to send: ')
                             s.send(data)
